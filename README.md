@@ -10,7 +10,7 @@ Useage:
         <ldap_server:port> <user_id> <user_password> <base_ou> [-filter=<filter>] [-attrs=<attrs>] [-pageSize=<page_size> -scope=<search_scop>]
 ```
 
-# Params 
+# Optional parameter default value
 <b>filter</b>
 default value : (&(objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(mail=*))
 
