@@ -1,6 +1,6 @@
 # LDAP tester
 
-Click [here](https://github.com/xooxle/ldap-tester/blob/master/versions/v1.0/ldaptester.jar) to download.
+Click [here](https://github.com/xooxle/ldap-tester/raw/master/versions/v1.0/ldaptester.jar) to download.
 
 Useage:
 ```bash
