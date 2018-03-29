@@ -1,4 +1,4 @@
-# LDAP tester
+# LDAP Tester
 
 Click [here](https://github.com/xooxle/ldap-tester/raw/master/versions/v1.0/ldaptester.jar) to download.
 
@@ -23,7 +23,7 @@ default value:mail,userPrincipalName
 <b>scope</b>
 default value : subtree. Avaliable values:onelevel,object and subtree.
 
-# Useage Example
+# Examples
 
 ## Find all AD users
 ```bash
