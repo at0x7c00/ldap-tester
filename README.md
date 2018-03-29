@@ -1,5 +1,7 @@
 # LDAP tester
 
+Click [here](https://github.com/xooxle/ldap-tester/blob/master/versions/v1.0/ldaptester.jar) to download.
+
 Useage:
 ```bash
 Useage:
@@ -21,11 +23,11 @@ default value:mail,userPrincipalName
 <b>scope</b>
 default value : subtree. Avaliable values:onelevel,object and subtree.
 
-# Eg.
+# Useage Example
 
 ## Find all AD users
 ```bash
-E:\>java -jar ldaptester.jar ldap://17*.2*.2*.**:389 itsm-test pwd*** OU=***有限公司,OU=***,DC=***,DC=***,DC=*** -filter="(&(objectClass=user)(objectCategory=person)(!(
+java -jar ldaptester.jar ldap://17*.2*.2*.**:389 itsm-test pwd*** OU=***有限公司,OU=***,DC=***,DC=***,DC=*** -filter="(&(objectClass=user)(objectCategory=person)(!(
 userAccountControl:1.2.840.113556.1.4.803:=2))(mail=*))" -pageSize=100 -atts=mail,userPrincipalName
 ```
 You can use pipleline to save result to file system.
@@ -34,7 +36,7 @@ You can use pipleline to save result to file system.
 
 ## Login test
 ```bash
-E:\>java -jar login ldaptester.jar ldap://17*.2*.2*.**:389 itsm-test pwd*** 
+java -jar login ldaptester.jar ldap://192.168.1.200:389 test changeit
 ```
 If login success,while display:"Login success!". 
 
