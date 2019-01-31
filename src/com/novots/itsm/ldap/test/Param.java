@@ -13,24 +13,34 @@ public class Param {
 	private String attrs;
 	private String pageSize;
 	private Integer scope;
+	private String find;
 	
 	public Param(String[] args){
-		for(String arg : args){
+		int i = 4;
+		for(;i < args.length;i++){
+			String arg = args[i];
+			System.out.println("arg:" + arg);
 			if(!arg.contains("=")){
 				continue;
 			}
-			String[] kv = arg.split("=");
-			String k = kv[0];
+			int x = arg.indexOf("=");
+			String k = arg.substring(0,x);
+			String v = arg.substring(x+1);
 			if(k.startsWith("-")){
 				k = k.substring(1);
 			}
-			map.put(kv[0], kv[1]);
+			map.put(k,v);
 		}
+		System.out.println(map);
 		baseou = map.get("ou");
 		filter = map.get("filter");
 		attrs = map.get("attrs");
 		pageSize = map.get("pageSize");
+		find = map.get("find");
 		String s  = map.get("scope");
+		if(s==null){
+			s = "subtree";
+		}
 		if(s.equals("onelevel")){
 			scope = SearchControls.ONELEVEL_SCOPE;
 		}else if(s.equals("object")){
@@ -75,4 +85,9 @@ public class Param {
 	public Integer getScope() {
 		return scope;
 	}
+
+	public String getFind() {
+		return find;
+	}
+
 }

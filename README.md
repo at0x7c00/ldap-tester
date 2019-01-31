@@ -5,9 +5,9 @@ Click [here](https://github.com/xooxle/ldap-tester/raw/master/versions/v1.0/ldap
 Useage:
 ```bash
 Useage:
-        pwd <encryped_pwd>
-        login <ldap_server:port> <user_id> <user_password>
-        <ldap_server:port> <user_id> <user_password> <base_ou> [-filter=<filter>] [-attrs=<attrs>] [-pageSize=<page_size> -scope=<search_scop>]
+	pwd <encryped_pwd>
+	login <ldap_server:port> <user_id> <user_password>
+	<ldap_server:port> <user_id> <user_password> <base_ou> [-filter=<filter>] [-attrs=<attrs>] [-pageSize=<page_size>] [-scope=[onelevel|object|sub]] [-find=<find>]
 ```
 
 # Optional parameter default value
@@ -40,5 +40,11 @@ java -jar login ldaptester.jar ldap://192.168.1.200:389 test changeit
 ```
 If login success,while display:"Login success!". 
 
+
+
+##find
+since 2.0
+
+you can find by userPrincipalName with -find=your_account.
 
 
