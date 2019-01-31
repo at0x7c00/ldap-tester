@@ -23,6 +23,9 @@ default value:mail,userPrincipalName
 <b>scope</b>
 default value : subtree. Avaliable values:onelevel,object and subtree.
 
+<b>find</b>
+you can find by userPrincipalName with -find=your_account.
+
 # Examples
 
 ## Find all AD users
